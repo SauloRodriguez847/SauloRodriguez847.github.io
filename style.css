@@ -1,0 +1,126 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.general{
+    width: 95%;
+    margin: auto;
+}
+
+.encabezado{
+height: 20%;
+background-color: #88a3fa;
+
+}
+
+.cuerpo{
+    margin-top: 20px;
+    margin: 50px;
+
+}
+
+.piepagina{
+    height: 110px;
+    background-color: #88a3fa;
+    padding: 10px;
+    margin: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bceaff;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 70px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+h3{
+    text-align: justify;
+
+}
+
+h2{
+
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    font-size: 20px;
+
+}
+
+.img1{
+
+    border-radius: 10%;
+    width: 9%;
+    float: right;
+
+}
+
+.gif{
+    width: 9%;
+    float: left;
+    
+}
+
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #7083ec;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+td a:hover {
+    color: #ff00bf;
+}
+
+.modulo {
+    background-color: #e3f2fd;
+    border: 2px solid #7083ec;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.submodulo {
+    background-color: #c8e6c9;
+    border: 1px solid #7083ec;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.module h3 {
+    color: #7083ec;
+}
