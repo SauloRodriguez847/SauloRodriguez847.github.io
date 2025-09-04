@@ -1,73 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TICS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descubre quién soy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .qa {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-left: 4px solid #007bff;
+      background-color: #f1f5ff;
+      border-radius: 6px;
+    }
+
+    .qa strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #007bff;
+    }
+
+    #revealBtn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    #revealBtn:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .result img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid #007bff;
+    }
+
+    .result h2 {
+      margin-bottom: 5px;
+      color: #222;
+    }
+
+    .result p {
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-         
-    <div class="general">
-        <div class="encabezado">
-            <h1>CAPACITACION TICS</h1>
-        </div>
-        
-        
-        <div class="cuerpo">
-                <p>Esta es una pagina donde podremos visualizar los trabajos que hemos realizado durate 
-                todos estos 4 semestres de clases, tambien mostrara cada submodulo un pequeño cronograma 
-                o una explicacion de lo que se vio en el semestre trascurrido.
-                </p>
-                <br><br>
-                <h3>A continuacion se les mostrara una tabla que esta separada por modulos que representan los
-                    semestres, y cada modulo viene con dos submodulos que cada submodulo es una materia de modulo.
-                </h3>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Aplicaciones informaticas<br><hr>Documentos Digitales</th>
-                        <th>Comunidades virtuales<br><hr>Mantenimiento de computo</th>
-                        <th>Sistemas de informacion<br><hr>Programacion</th>
-                        <th>Paginas WEB<br><hr>Diseño Digital</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="modulo">
-                           <div class="submodulo"><a href="html1.html" target="_blank"> MODULO 1</a></div>
-                            
-                        </td>
-                        <td class="modulo">
-                            <div class="submodulo"><a href="html2.html" target="_blank">MODULO 2</a></div>
+  <div class="container">
+    <h1>Descubre quién soy</h1>
 
-                        </td>
-                        <td class="modulo">
-                            <div class="submodulo"><a href="html3.html" target="_blank">MODULO 3</a></div>
-
-                        </td>
-                        <td class="modulo">
-                            <div class="submodulo"><a href="html4.html" target="_blank">MODULO 4</a></div>
-
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        
-        </div>
-        <div style="background-color: #88a3fa;"class="piepagina">
-            
-            <img src="imagenes/3jnj.gif" class="gif">
-            <img src="imagenes/yo.jpg" class="img1"
-            <center><h2>RODRIGUEZ OGAZ SAULO JOSUE</h2></center>
-            <center><h2>22190448</h2></center>
-            
-        </div>
+    <div class="qa">
+      <strong>¿Cual es mi serie favorita?</strong>
+      Breaking Bad
     </div>
-</body>
-</html>
 
+    <div class="qa">
+      <strong>¿Cual es mi cantante favorito?</strong>
+      Mon Laferte
+    </div>
+
+    <div class="qa">
+      <strong>¿Cuales son mis caracteristicas?</strong>
+      Uso lentes y tengo cabello chino
+    </div>
+
+    <div class="qa">
+      <strong>¿Pasatiempo preferido?</strong>
+      Tocar instrumentos y videojuegos
+    </div>
+
+    <div class="qa">
+      <strong>¿Animal favorito?</strong>
+      El pato🦆
+    </div>
+
+    <button id="revealBtn">Revelar quién soy</button>
+
+    <div class="result" id="result">
+      <img id="photo" src="yo.jpeg" alt="Foto de la persona">
+      <h2 id="name">Persona Misteriosa</h2>
+      <p>¡Ahora ya sabes quién era!</p>
+    </div>
+  </div>
+
+  <script>
+    const revealBtn = document.getElementById("revealBtn");
+    const result = document.getElementById("result");
+
+    const MISTERIO = {
+      nombre: "Saulo",
+      foto: "yo.jpeg"
+    };
+
+    revealBtn.addEventListener("click", () => {
+      document.getElementById("name").textContent = MISTERIO.nombre;
+      document.getElementById("photo").src = MISTERIO.foto;
+      result.style.display = "block";
+      revealBtn.style.display = "none";
+    });
+  </script>
 </body>
 </html>
